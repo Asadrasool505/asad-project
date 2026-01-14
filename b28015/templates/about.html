@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/templatemo-stand-blog.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+<div class="heading-page header-text">
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-content">
+            <h4>Learn More</h4>
+            <h2>About Our Pakistan Blog Project</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <img src="{% static 'assets/images/about-us.jpg' %}" alt="About Our Project" class="img-fluid mb-4">
+        
+        <p>Welcome to Asad's Pakistan Blog, a modern platform built from the heart of Lahore. This project is not just a simple blog; it is a fusion of traditional storytelling and cutting-edge technology. Our goal is to showcase the beauty of Pakistan—from the historic streets of Lahore to the snow-capped peaks of the North—while using advanced web frameworks like Django.
+        <br><br>
+        This project fulfills our academic requirements by integrating AI Sentiment Analysis. When you interact with our content, our AI system analyzes the tone of the feedback to ensure a positive and engaging community for all users.</p>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-4 col-md-6">
+        <h4>Our Vision</h4>
+        <p>To digitize the rich culture of Pakistan and provide a platform where technology meets heritage. We aim to highlight Lahore's status as a growing tech hub.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>AI Integration</h4>
+        <p>Using Python's powerful libraries, we have implemented Sentiment Analysis to understand user emotions and improve content delivery.</p>
+      </div>
+      <div class="col-lg-4">
+        <h4>Built with Django</h4>
+        <p>Leveraging the Django framework for secure authentication, database management, and a seamless user experience across all devices.</p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <h4>Based in Lahore</h4>
+        <p>Proudly developed in the City of Gardens. Our project reflects the vibrant energy and hospitality that Lahore is known for globally.</p>
+      </div>
+      <div class="col-lg-6">
+        <h4>Roll Number: B-28015</h4>
+        <p>This project is submitted as part of the official evaluation for the 2026 semester, adhering to all technical guidelines provided.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="social-icons mt-4">
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'assets/js/owl.js' %}"></script>
+<script src="{% static 'assets/js/slick.js' %}"></script>
+{% endblock %}

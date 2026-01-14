@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/templatemo-stand-blog.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+<div class="heading-page header-text">
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-content">
+            <h4>Pakistan Diaries</h4>
+            <h2>Our Recent Blog Entries from Lahore</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="blog-posts grid-system">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="all-blog-posts">
+          <div class="row">
+            
+            {% if posts %}
+              {% for post in posts %}
+              <div class="col-lg-6">
+                <div class="blog-post">
+                  <div class="blog-thumb">
+                    <img src="{% static 'assets/images/blog-thumb-01.jpg' %}" alt="{{ post.title }}">
+                  </div>
+                  <div class="down-content">
+                    <span>{{ post.author.username }}</span>
+                    <a href="#"><h4>{{ post.title }}</h4></a>
+                    <ul class="post-info">
+                      <li><a href="#">Admin</a></li>
+                      <li><a href="#">{{ post.created_at|date:"M d, Y" }}</a></li>
+                      <li><a href="#">{{ post.comments.count }} Comments</a></li>
+                    </ul>
+                    <p>{{ post.content|truncatechars:120 }}</p>
+                    
+                    <hr>
+                    <div class="comment-form">
+                      <form method="POST" action="{% url 'add_comment' post.id %}">
+                        {% csrf_token %}
+                        <div class="input-group mb-2">
+                          <input type="text" name="message" class="form-control form-control-sm" placeholder="Add a comment..." required>
+                          <button class="btn btn-sm" type="submit" style="background-color: #f48139; color: white;">Post</button>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="recent-comments" style="max-height: 150px; overflow-y: auto;">
+  {% for comment in post.comments.all %}
+    <div class="p-2 mb-1" style="background: #f9f9f9; border-radius: 5px; font-size: 13px; position: relative;">
+      <strong>{{ comment.text }}</strong> <br>
+      <small class="text-muted">AI Analysis: <strong>{{ comment.sentiment }}</strong></small>
+      <a href="{% url 'edit_comment' comment.id %}" 
+   style="color: #007bff; font-size: 11px; font-weight: bold; text-decoration: none; margin-left: 5px;">
+   [Edit]
+</a>
+      <a href="{% url 'delete_comment' comment.id %}" 
+         onclick="return confirm('Are you sure you want to delete this comment?')"
+         style="color: #dc3545; font-size: 11px; font-weight: bold; text-decoration: none; margin-left: 10px;">
+         [Delete]
+      </a>
+    </div>
+  {% empty %}
+    <p style="font-size: 12px;">No comments yet. Be the first!</p>
+  {% endfor %}
+</div>
+
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            {% else %}
+              <div class="col-lg-12">
+                <h3>No posts found. Please add some from the <a href="/admin">Admin Panel</a>.</h3>
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="sidebar-item search">
+                <form id="search_form" method="GET" action="#">
+                  <input type="text" name="q" class="searchText" placeholder="Search Pakistan..." autocomplete="on">
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item recent-posts">
+                <div class="sidebar-heading"><h2>User Info</h2></div>
+                <div class="content">
+                  <p><strong>Name:</strong> {{ my_name }}</p>
+                  <p><strong>Roll No:</strong> {{ my_roll }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+{% endblock %}

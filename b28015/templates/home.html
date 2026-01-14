@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/templatemo-stand-blog.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+<div class="main-banner header-text">
+  <div class="container-fluid">
+    <div class="owl-banner owl-carousel">
+      <div class="item">
+        <img src="{% static 'assets/images/banner-item-01.jpg' %}" alt="Badshahi Mosque">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category"><span>Heritage</span></div>
+            <a href="{% url 'blog' %}"><h4>The Majestic Badshahi Mosque: A Symbol of Lahore</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Asad</a></li>
+              <li><a href="#">Jan 14, 2026</a></li>
+              <li><a href="#">12 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="{% static 'assets/images/banner-item-02.jpg' %}" alt="Northern Pakistan">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category"><span>Travel</span></div>
+            <a href="{% url 'blog' %}"><h4>Exploring the Natural Beauty of Skardu & Hunza</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Asad</a></li>
+              <li><a href="#">Jan 13, 2026</a></li>
+              <li><a href="#">24 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="{% static 'assets/images/banner-item-03.jpg' %}" alt="Lahori Food">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category"><span>Lifestyle</span></div>
+            <a href="{% url 'blog' %}"><h4>The World Famous Street Food of Lahore Anarkali</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Asad</a></li>
+              <li><a href="#">Jan 12, 2026</a></li>
+              <li><a href="#">36 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="{% static 'assets/images/banner-item-04.jpg' %}" alt="Minar-e-Pakistan">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category"><span>History</span></div>
+            <a href="{% url 'blog' %}"><h4>Minar-e-Pakistan: Where the Resolution was Born</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Asad</a></li>
+              <li><a href="#">Jan 11, 2026</a></li>
+              <li><a href="#">48 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="{% static 'assets/images/banner-item-05.jpg' %}" alt="Tech Pakistan">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category"><span>Technology</span></div>
+            <a href="{% url 'blog' %}"><h4>The Booming IT Industry & Freelancing in Pakistan</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Asad</a></li>
+              <li><a href="#">Jan 10, 2026</a></li>
+              <li><a href="#">64 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="{% static 'assets/images/banner-item-06.jpg' %}" alt="Cricket Pakistan">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category"><span>Sports</span></div>
+            <a href="{% url 'blog' %}"><h4>Cricket Fever: PSL and the Love for the Game</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Asad</a></li>
+              <li><a href="#">Jan 09, 2026</a></li>
+              <li><a href="#">72 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="main-content">
+          <div class="row">
+            <div class="col-lg-8">
+              <span>Asad's Pakistan Project</span>
+              <h4>Explore the Vibrant Culture and History of Lahore!</h4>
+            </div>
+            <div class="col-lg-4">
+              <div class="main-button">
+                <a href="{% url 'contact' %}">Contact Now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="all-blog-posts">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="blog-post">
+                <div class="blog-thumb">
+                  <img src="{% static 'assets/images/blog-post-01.jpg' %}" alt="">
+                </div>
+                <div class="down-content">
+                  <span>Culture</span>
+                  <a href="{% url 'blog' %}"><h4>Lahore: The Heart of Punjab and Hospitality</h4></a>
+                  <ul class="post-info">
+                    <li><a href="#">Asad</a></li>
+                    <li><a href="#">Jan 14, 2026</a></li>
+                    <li><a href="#">12 Comments</a></li>
+                  </ul>
+                  <p>Lahore is famous for its rich history and hospitality. This city of gardens hosts millions of tourists every year who come to see the Walled City, Lahore Fort, and enjoy the spicy Lahori Karahi. Discover why they say 'Lahore Lahore Aye'!</p>
+                  <div class="post-options">
+                    <div class="row">
+                      <div class="col-6">
+                        <ul class="post-tags">
+                          <li><i class="fa fa-tags"></i></li>
+                          <li><a href="#">Lahore</a>, <a href="#">Punjab</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="post-share">
+                          <li><i class="fa fa-share-alt"></i></li>
+                          <li><a href="https://facebook.com" target="_blank">Facebook</a>, <a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="blog-post">
+                <div class="blog-thumb">
+                  <img src="{% static 'assets/images/blog-post-02.jpg' %}" alt="">
+                </div>
+                <div class="down-content">
+                  <span>Tourism</span>
+                  <a href="{% url 'blog' %}"><h4>Heaven on Earth: The Northern Areas of Pakistan</h4></a>
+                  <ul class="post-info">
+                    <li><a href="#">Asad</a></li>
+                    <li><a href="#">Jan 12, 2026</a></li>
+                    <li><a href="#">36 Comments</a></li>
+                  </ul>
+                  <p>From the heights of K2 to the crystal clear waters of Attabad Lake, Pakistan's northern areas are a paradise for travelers. In this post, Asad explores the best spots for your next summer vacation in Hunza and Naran.</p>
+                  <div class="post-options">
+                    <div class="row">
+                      <div class="col-6">
+                        <ul class="post-tags">
+                          <li><i class="fa fa-tags"></i></li>
+                          <li><a href="#">Tourism</a>, <a href="#">Nature</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="blog-post">
+                <div class="blog-thumb">
+                  <img src="{% static 'assets/images/blog-post-03.jpg' %}" alt="">
+                </div>
+                <div class="down-content">
+                  <span>Technology</span>
+                  <a href="{% url 'blog' %}"><h4>Digital Pakistan: The Future of Freelancing</h4></a>
+                  <ul class="post-info">
+                    <li><a href="#">Asad</a></li>
+                    <li><a href="#">Jan 10, 2026</a></li>
+                    <li><a href="#">48 Comments</a></li>
+                  </ul>
+                  <p>With the rise of internet connectivity, Pakistani youth are making their mark in the global IT market. This post discusses how students in Lahore are using Django and AI to build future-ready applications.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="main-button">
+                <a href="{% url 'blog' %}">View All Posts</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="sidebar-item search">
+                <form id="search_form" name="gs" method="GET" action="#">
+                  <input type="text" name="q" class="searchText" placeholder="Search Pakistan..." autocomplete="on">
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item recent-posts">
+                <div class="sidebar-heading"><h2>Recent Stories</h2></div>
+                <div class="content">
+                  <ul>
+                    <li><a href="#"><h5>Lahore Fort Light Show Experience</h5><span>Jan 14, 2026</span></a></li>
+                    <li><a href="#"><h5>New IT Parks in Islamabad</h5><span>Jan 11, 2026</span></a></li>
+                    <li><a href="#"><h5>Traditional Mehndi Outfits 2026</h5><span>Jan 08, 2026</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item categories">
+                <div class="sidebar-heading"><h2>Local Categories</h2></div>
+                <div class="content">
+                  <ul>
+                    <li><a href="#">- Lahori Foodies</a></li>
+                    <li><a href="#">- Punjab Culture</a></li>
+                    <li><a href="#">- Tech in Pakistan</a></li>
+                    <li><a href="#">- Travel Diaries</a></li>
+                    <li><a href="#">- Sports News</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item tags">
+                <div class="sidebar-heading"><h2>Popular Tags</h2></div>
+                <div class="content">
+                  <ul>
+                    <li><a href="#">Lahore</a></li>
+                    <li><a href="#">Karachi</a></li>
+                    <li><a href="#">Islamabad</a></li>
+                    <li><a href="#">Crickt</a></li>
+                    <li><a href="#">AI</a></li>
+                    <li><a href="#">Django</a></li>
+                    <li><a href="#">B-28015</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+<script src="{% static 'assets/js/owl.js' %}"></script>
+<script src="{% static 'assets/js/slick.js' %}"></script>
+<script src="{% static 'assets/js/isotope.js' %}"></script>
+<script src="{% static 'assets/js/accordions.js' %}"></script>
+
+{% endblock %}
